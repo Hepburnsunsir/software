@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.controller">
+    <!-- 调用红外设备权限声明 -->
+    <uses-permission android:name="android.permission.TRANSMIT_IR" />
+    <!-- Android Market会根据uses-feature过滤所有你设备不支持的应用,即无红外功能的设备看不到此应用 -->
+    <uses-feature android:name="android.hardware.ConsumerIrManager" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.baidu.speech.APP_ID"
+            android:value="	16362582"/>
+        <meta-data
+            android:name="com.baidu.speech.API_KEY"
+            android:value="D7PH6ooNO0mK2QpkOQ2Sanve"/>
+        <meta-data
+            android:name="com.baidu.speech.SECRET_KEY"
+            android:value="	rV0yncQs6ZIKCksz5U0GC84NOKghafMw"/>
+        <activity android:name=".activity.RemoteControlActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
